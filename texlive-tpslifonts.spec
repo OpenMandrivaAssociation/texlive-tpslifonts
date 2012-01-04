@@ -6,7 +6,7 @@
 # catalog-version 0.6
 Name:		texlive-tpslifonts
 Version:	0.6
-Release:	1
+Release:	2
 Summary:	A LaTeX package for configuring presentation fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/exptl/texpower/tpslifonts
