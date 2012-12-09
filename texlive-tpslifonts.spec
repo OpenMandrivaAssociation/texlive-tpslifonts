@@ -1,19 +1,18 @@
-# revision 27464
+# revision 15878
 # category Package
-# catalog-ctan /macros/latex/contrib/texpower/tpslifonts
-# catalog-date 2012-04-27 17:14:22 +0200
+# catalog-ctan /macros/latex/exptl/texpower/tpslifonts
+# catalog-date 2007-01-18 20:18:05 +0100
 # catalog-license gpl
 # catalog-version 0.6
 Name:		texlive-tpslifonts
 Version:	0.6
-Release:	3
+Release:	2
 Summary:	A LaTeX package for configuring presentation fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/texpower/tpslifonts
+URL:		http://www.ctan.org/tex-archive/macros/latex/exptl/texpower/tpslifonts
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tpslifonts.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tpslifonts.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tpslifonts.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -32,7 +31,7 @@ extras for optimising readability. Text fonts from computer
 modern roman, computer modern sans serif, SliTeX computer
 modern sans serif, computer modern bright, or concrete roman
 are available, in addition to math fonts from computer modern
-math, computer modern bright math, or Euler fonts. The package
+math, computer modern bright math, or Euler fonts. This package
 is part of the TeXPower bundle.
 
 %post
@@ -47,19 +46,29 @@ is part of the TeXPower bundle.
 %files
 %{_texmfdistdir}/tex/latex/tpslifonts/tpslifonts.sty
 %doc %{_texmfdistdir}/doc/latex/tpslifonts/00readme.txt
-%doc %{_texmfdistdir}/doc/latex/tpslifonts/01install.txt
-%doc %{_texmfdistdir}/doc/latex/tpslifonts/Makefile
+%doc %{_texmfdistdir}/doc/latex/tpslifonts/0install.txt
+%doc %{_texmfdistdir}/doc/latex/tpslifonts/__TPslifonts.tex
 %doc %{_texmfdistdir}/doc/latex/tpslifonts/slifontsexample.tex
-#- source
-%doc %{_texmfdistdir}/source/latex/tpslifonts/tpslifonts.dtx
-%doc %{_texmfdistdir}/source/latex/tpslifonts/tpslifonts.ins
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a0 -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.6-2
++ Revision: 757040
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.6-1
++ Revision: 719788
+- texlive-tpslifonts
+- texlive-tpslifonts
+- texlive-tpslifonts
+
