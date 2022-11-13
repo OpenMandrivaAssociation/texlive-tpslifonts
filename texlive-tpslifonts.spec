@@ -1,19 +1,13 @@
-# revision 27464
-# category Package
-# catalog-ctan /macros/latex/contrib/texpower/tpslifonts
-# catalog-date 2012-04-27 17:14:22 +0200
-# catalog-license gpl
-# catalog-version 0.6
 Name:		texlive-tpslifonts
-Version:	0.6
-Release:	13
+Version:	42428
+Release:	1
 Summary:	A LaTeX package for configuring presentation fonts
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/texpower/tpslifonts
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tpslifonts.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tpslifonts.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tpslifonts.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tpslifonts.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tpslifonts.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tpslifonts.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -36,12 +30,12 @@ math, computer modern bright math, or Euler fonts. The package
 is part of the TeXPower bundle.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -56,7 +50,8 @@ is part of the TeXPower bundle.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
