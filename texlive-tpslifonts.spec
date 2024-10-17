@@ -3,7 +3,7 @@ Version:	42428
 Release:	2
 Summary:	A LaTeX package for configuring presentation fonts
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/texpower/tpslifonts
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/texpower/tpslifonts
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tpslifonts.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tpslifonts.doc.r%{version}.tar.xz
